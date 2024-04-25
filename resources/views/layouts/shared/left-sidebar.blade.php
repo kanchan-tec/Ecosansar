@@ -37,7 +37,7 @@
             </li>
 
             <li class="side-nav-item">
-                <a   href="#sidebarPages"
+                <a   href="{{ route('Faq.list') }}"
                     class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> FAQs </span>
@@ -45,7 +45,7 @@
             </li>
 
             <li class="side-nav-item">
-                <a href={{ route('admin.contact.list') }}
+                <a href="{{ route('admin.contact.list') }}"
                     class="side-nav-link">
                     <i class="ri-pages-line"></i>
                     <span> ContatUs </span>

@@ -28,9 +28,9 @@ Route::group(['prefix' => '/', 'middleware'=>'auth'], function () {
 });
 
 Route::controller(FaqController::class)->group(function(){
-
-    Route::get('/add','add')->name('User.add');
-
+    Route::get('/list','index')->name('Faq.list');
+    Route::get('/add','add')->name('Faq.add');
+    Route::post('/save','save')->name('Faq.save');
     });
 
 

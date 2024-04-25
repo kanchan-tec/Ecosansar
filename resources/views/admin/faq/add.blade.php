@@ -1,64 +1,43 @@
-@extends('layouts.vertical', ['title' => 'Add', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical', ['title' => 'FAQ Add', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+
+@section('css')
+    @vite(['node_modules/select2/dist/css/select2.min.css', 'node_modules/daterangepicker/daterangepicker.css', 'node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css', 'node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css', 'node_modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css', 'node_modules/flatpickr/dist/flatpickr.min.css'])
+@endsection
 
 @section('content')
-@include('layouts.shared/page-title', ['sub_title' => 'Add', 'page_title' => 'Add'])
-
-
-
+    @include('layouts.shared/page-title', ['sub_title' => 'Add', 'page_title' => 'FAQ Add'])
 
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-header">
-                <h4 class="header-title">Date Range Picker</h4>
-                <p class="text-muted mb-0">
-                    A JavaScript component for choosing date ranges, dates and times.
-                </p>
-            </div>
+
             <div class="card-body">
+                <form action="{{ route('Faq.save') }}" method="POST">
+                    @csrf
                 <div class="row">
                     <div class="col-lg-6">
                         <!-- Date Range -->
                         <div class="mb-3">
-                            <label class="form-label">Date Range</label>
-                            <input type="text" class="form-control date" id="singledaterange"
-                                data-toggle="date-picker" data-cancel-class="btn-warning">
+                            <label for="simpleinput" class="form-label">Question</label>
+                            <input type="text" id="question" name="question" class="form-control">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <!-- Date Range Picker With Times -->
                         <div class="mb-3">
-                            <label class="form-label">Date Range Picker With Times</label>
-                            <input type="text" class="form-control date" id="daterangetime"
-                                data-toggle="date-picker" data-time-picker="true"
-                                data-locale="{'format': 'DD/MM hh:mm A'}">
+                            <label for="simpleinput" class="form-label">Answer</label>
+                            <input type="text" id="answer" name="answer" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <button class="btn btn-primary" type="submit">Submit form</button>
                         </div>
                     </div>
                 </div>
+            </form>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <!-- Single Date Picker -->
-                        <div>
-                            <label class="form-label">Single Date Picker</label>
-                            <input type="text" class="form-control date" id="birthdatepicker"
-                                data-toggle="date-picker" data-single-date-picker="true">
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <!-- Predefined Date Ranges -->
-                        <div>
-                            <label class="form-label">Predefined Date Ranges</label>
-                            <div id="reportrange" class="form-control" data-toggle="date-picker-range"
-                                data-target-display="#selectedValue" data-cancel-class="btn-light">
-                                <i class="ri-calendar-2-line"></i>&nbsp;
-                                <span id="selectedValue"></span> <i class="ri-arrow-down-s-line"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
             </div> <!-- end card-body -->
         </div> <!-- end card-->
