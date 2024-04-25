@@ -39,7 +39,7 @@ class RoutingController extends Controller
 
         $mode = $request->query('mode');
         $demo = $request->query('demo');
-     
+
         if ($first == "assets")
             return redirect('home');
 
@@ -75,7 +75,7 @@ class RoutingController extends Controller
             return redirect('home');
 
         dd($first,$second,$third);
-        
+
         return view($first . '.' . $second . '.' . $third, ['mode' => $mode, 'demo' => $demo]);
     }
 }
