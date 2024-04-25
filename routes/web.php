@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 use App\Http\Controllers\admin\FaqController;
+use App\Http\Controllers\admin\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,9 @@ Route::controller(FaqController::class)->group(function(){
     Route::get('/add','add')->name('User.add');
 
     });
+
+
+Route::controller(ContactController::class)->group(function(){
+    Route::get('contact/list','list')->name('admin.contact.list');
+});
 

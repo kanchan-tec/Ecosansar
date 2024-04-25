@@ -44,6 +44,14 @@
                 </a>
             </li>
 
+            <li class="side-nav-item">
+                <a href={{ route('admin.contact.list') }}
+                    class="side-nav-link">
+                    <i class="ri-pages-line"></i>
+                    <span> ContatUs </span>
+                </a>
+            </li>
+
         </ul>
         <!--- End Sidemenu -->
 
