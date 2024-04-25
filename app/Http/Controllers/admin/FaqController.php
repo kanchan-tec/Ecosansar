@@ -9,7 +9,8 @@ use App\Models\admin\Faq;
 class FaqController extends Controller
 {
         public function index(){
-            return view('admin/faq/list');
+            $result = Faq::orderBy('id','DESC')->get();
+            return view('admin/faq/list',compact('result'));
         }
 
         public function add(){

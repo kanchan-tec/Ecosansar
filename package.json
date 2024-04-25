@@ -28,6 +28,7 @@
         "datatables.net-bs5": "1.11.4",
         "datatables.net-buttons": "2.2.2",
         "datatables.net-buttons-bs5": "2.2.2",
+        "datatables.net-dt": "^2.0.5",
         "datatables.net-fixedcolumns": "^4.0.2",
         "datatables.net-fixedcolumns-bs5": "^4.0.2",
         "datatables.net-fixedheader": "^3.2.2",
