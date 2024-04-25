@@ -35,6 +35,6 @@ Route::controller(FaqController::class)->group(function(){
 
 
 Route::controller(ContactController::class)->group(function(){
-    Route::get('contact/list','list')->name('admin.contact.list');
+    Route::get('admin/contact/list','list')->name('admin.contact.list');
 });
 

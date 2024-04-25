@@ -1,4 +1,4 @@
-@extends('layouts.vertical', ['title' => 'Contact List', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
+@extends('layouts.vertical', ['title' => 'ContactList', 'mode' => $mode ?? '', 'demo' => $demo ?? ''])
 
 @section('css')
     @vite([
